@@ -1,83 +1,65 @@
 <html>
 
     <head>
-    <body>
-        <div>
+           <title>yo la famille</title>
+    </head>
 
-        <H1> Design Génératif </H1>
-        <H2>Courd de codage</H2>
-        <H3>Cours</H3>
-        <H4>Cours</H4>
+    <body>
+        <a href="https://www.youtube.com/">lien vers youtube</a>
+        <div class="bernadette">
+            <h1>Helloooo</h1>
+            <h2>Hola buenos dias</h2>
+            <h3>como estas ?</h3>
+            <h4>myu bien y tu ?</h4>
+            <p> Yo vivo en Granada, una ciudad pequeña que tiene monumentos muy importantes como la Alhambra. Aquí la comida es deliciosa y son famosos el gazpacho, el rebujito y el salmorejo.</p>
+         </div>
+        
+         <div class="gerad">
+         <img class="fit-picture"
+            src="https://images.pexels.com/photos/933498/pexels-photo-933498.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="foret">
         </div>
-        <p>
-        Quisque vestibulum purus eu felis egestas fermentum. Donec posuere tincidunt mi. Morbi in vehicula libero. Nullam dictum erat ut nisi ultricies sollicitudin. In et felis ac felis aliquam egestas non non enim. Sed pharetra, velit id pretium ultrices, nibh est aliquet nibh, eget gravida urna massa at metus. Duis mollis ex ut fringilla pharetra. Duis vitae dignissim ligula, sit amet tincidunt dolor. Praesent in est facilisis, auctor nisl quis, aliquet ipsum.
-         </p>
-    
-    <a href="https://www.pinterest.fr/"> Lien vers Pinterest</a> <br><br>
-    
-    <img class="pexels-photo-1313817"
-    src="https://images.pexels.com/photos/1313817/pexels-photo-1313817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    alt="lumière">
+<h1 class="femme"></h1>
+
+<div id="bande" style="background-color: red; width: 100%; height: 50px;"></div>
 
     </body>
 
-    <style>
-        div {
-            background-color: blueviolet;
-        }
-        a {
-            color :violet;
-        }
-    </style>
+<style>
     
-    </head>
-    <html>
-        <head>
-          <title>Design</title>
-        </head>
-      
-        <body>
-          <div class="parent">
-            <h1 class="morice">HELLO</h1>
-            <h1 class="morice">It's me</h1>
-          </div>
-        </body>
-      
-        <style>
+    .bernadette{
+        display:flex ;
+        background-color: antiquewhite;
+    }
 
-             .clautilde{
-            
-             display:flex ;
-            
-             background-color: rgb(236, 215, 240);
-            
-             }
-            
-            
-             .michel{
-            
-             background-color: #e0e3e9;
-            
-           }
-            
-            </style>
-            
-            <script>
-            let boiboite = 0;
-            
-            
-            function Brice() {
-            
-             boiboite = boiboite + 1;
-            
-             console.log(boiboite);
-          
-            
-            }
-            
-          document.querySelector(".michel");addEventListener("click",Brice);
-            
-            </script>
-            
-            Dispose d'un menu contextuel
-            Composer
+    .gerad{
+    background-color: #e0e3e9;
+    }
+</style>
+
+<script>
+    let boiboite = 0;
+
+function Brice() {
+    boiboite = boiboite + 1;
+    console.log(boiboite);
+
+
+    document.querySelector(".femme").innerHTML = boiboite;
+  
+}
+ document.querySelector(".gerad");addEventListener("click",Brice);
+
+ var colors = ["red", "green", "blue", "yellow"]; // Tableau de couleurs
+var currentColor = 0; // Index de la couleur actuelle
+
+document.getElementById("bande").addEventListener("click", function() {
+  currentColor = (currentColor + 1) % colors.length; // Incrémente l'index et le ramène à zéro s'il dépasse la taille du tableau
+  this.style.backgroundColor = colors[currentColor]; // Change la couleur de fond de la bande en fonction de l'index actuel
+});
+
+</script>
+
+
+
+</html>
