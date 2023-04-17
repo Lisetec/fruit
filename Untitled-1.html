@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body> 
+  
+	<div class="circle">
+        <img src="./1. banane.png" alt="Image 1" />
+        <img src="./assest-01.png" alt="Image 3" />
+        <img src="./assest-02.png" alt="Image 3" />
+        <img src="./assest-03.png" alt="Image 3" />
+        
+        
+
+	</div>
+
+   
+</body>
+	
+
+	<script>
+		 var images = [
+    "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1085757/pexels-photo-1085757.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+  ];
+  var currentIndex = 0;
+
+  // Récupérez toutes les images dans un tableau
+  var allImages = document.querySelectorAll(".circle img");
+
+  // Ajoutez un événement de clic à chaque image
+  allImages.forEach(function(img, index) {
+    img.addEventListener("click", function() {
+      // Créez une fenêtre modale et ajoutez l'image en taille réelle
+      var modal = document.createElement("div");
+      modal.classList.add("modal");
+      var img = document.createElement("img");
+      img.src = images[index];
+      modal.appendChild(img);
+      document.body.appendChild(modal);
+
+      // Ajoutez un événement de clic à la fenêtre modale pour la fermer
+      modal.addEventListener("click", function() {
+        modal.remove();
+      });
+    });
+  });
+	
+	</script>
+
+<style>
+    .circle {
+border-radius: 50%;
+overflow: hidden;
+width: 100px;
+height: 100px;
+background-color: red;
+}
+    .circle img {
+display: flex;
+margin: 0 auto;
+max-width: 100%;
+max-height: 100%;
+}
+
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+</style>
+</body>
+</html>
