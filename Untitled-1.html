@@ -36,12 +36,16 @@
  <button id="btn2"><img src="./1. banane.png" alt="banane" /> Fruit </button>
  <button id="btn3" onclick="changeBackgroundColor()">Changer la couleur de fond</button>
  <button id="btn4">rond</button>
+ <button id="btn5">background</button>
  <div class="rectangle">
  <img src="./assest-01.png" id="croix" alt="Image 3" />
  <img src="./assest-01.png" id="croix2" alt="Image 3" />
  <img src="./1. banane.png" id="blod" alt="banane" />
  <img src="./assest-02.png" id="cercle" alt="Image 2" />
  <img src="./assest-02.png" id="cercle2" alt="Image 2" />
+ <img src="./bg-1.PNG" id="backgroung1" alt="fond"/>
+ <img src="./bg-2.PNG" id="backgroung2" alt="fond"/>
+ <img src="./bg-3.PNG" id="backgroung3" alt="fond"/>
  </div>
  <script>
 
@@ -54,6 +58,11 @@ var banane= [
 
 ];
 
+var fond=[
+'./bg-1.png',
+'./bg-2.png',
+'./bg-3.png',
+]
 // sélectionner le bouton et l'image
 
 var btn2 = document.getElementById('btn2');
@@ -428,7 +437,7 @@ z-index: 0;
   })
 canvasPromise.then((canvas)=>{
 console.log(canvas)
-document.body.appendChild(canvas)
+//document.body.appendChild(canvas)
 
 var dataURL=canvas.toDataURL("image/png");
 console.log (dataURL)
