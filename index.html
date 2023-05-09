@@ -44,10 +44,10 @@
  <img src="./assest-02.png" id="cercle" alt="Image 2" />
  <img src="./assest-02.png" id="cercle2" alt="Image 2" />
  <img src="./bg-1.PNG" id="backgroung1" alt="fond"/>
- <img src="./bg-2.PNG" id="backgroung2" alt="fond"/>
- <img src="./bg-3.PNG" id="backgroung3" alt="fond"/>
  </div>
  <script>
+
+
 
 // Bouton fruit
 
@@ -58,11 +58,7 @@ var banane= [
 
 ];
 
-var fond=[
-'./bg-1.png',
-'./bg-2.png',
-'./bg-3.png',
-]
+
 // sélectionner le bouton et l'image
 
 var btn2 = document.getElementById('btn2');
@@ -78,12 +74,12 @@ var index = Math.floor(Math.random() * banane.length);
 
 // changer la source de l'image
 
-
-
-
  blod.src = banane[index];
 
 });
+
+
+
 
 // Bouton étoiles
 
@@ -136,6 +132,8 @@ croix2.src = etoile1[index];
 function getRandomPercentage() {
 return Math.floor(Math.random() * 91) + "%";
 }
+
+
 
 // Bouton cercle
 var rond= [
@@ -194,6 +192,35 @@ function getRandomPercentage() {
 return Math.floor(Math.random() * 91) + "%";
 
 } 
+
+
+
+//Bouton fond graphique
+var fond=[
+'./bg-1.png',
+'./bg-2.png',
+'./bg-3.png',
+]
+// sélectionner le bouton et l'image
+
+var btn5 = document.getElementById('btn5');
+var backgroung1 = document.getElementById('backgroung1');
+
+// ajouter un événement de clic au bouton
+
+btn5.addEventListener('click', function() {
+
+// générer un index aléatoire
+
+var index = Math.floor(Math.random() * fond.length);
+
+// changer la source de l'image
+
+ backgroung1.src = fond[index];
+
+});
+
+
 
 //Changement couleur du fond
 
@@ -302,6 +329,18 @@ top: 30%;
 left: 75%;
 z-index: 0;
 }
+
+
+
+#backgroung1 {
+transform: translate(-50%, -50%);
+width: 500px;
+height: 700px;
+top: 100%;
+left: 100%;
+z-index: 0;
+}
+
 
 
 #btn2 {
