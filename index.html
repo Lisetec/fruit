@@ -7,18 +7,14 @@
 </head>
 
 <body>
-  <button class="Screenshot">scrennshot</button>
-
-
-
-
-
-  <img id="panier" src="tp-panier.png" alt="Panier" />
+  
  
 <div id="menu">
+  
 <div id="menu2">
   <img id="logo" src="logo.png" alt="Logo" />
-
+  <img id="panier" src="tp-panier.png" alt="Panier" />
+  <img id="burger" src="menu.png" alt="Menu_burger" />
 
   <ul>
    <li><a href="#">Accueil</a></li>
@@ -28,23 +24,53 @@
    <li><a href="#">Contact</a></li>
    </ul>
 
+</div>
+</div>
+
+<div class="container2">
+
+
+  <div class="container3">
+    <div class="all_fruits">
+   <button id="btn2"><img src="./1. banane.png" alt="banane" /> Fruit </button>
+    </div>
+  
+    <div class="icone_etoile">
+   <!-- <button id="btn"><img src="assest-01.png" alt="etoile" /> Etoile</button>
+    </div> -->
+  
+    <div class="icone_rond">
+   <button id="btn4">rond</button>
+    </div>
+  
+    <div class="icone_fond">
+   <button id="btn5">background</button>
+    </div>
+  
+    <div class="icone_couleurs">
+   <button id="btn3" onclick="changeBackgroundColor()">Changer la couleur de fond</button>
+    </div>
+  
   </div>
 
-</div>
- 
- <button id="btn">étoile</button>
- <button id="btn2"><img src="./1. banane.png" alt="banane" /> Fruit </button>
- <button id="btn3" onclick="changeBackgroundColor()">Changer la couleur de fond</button>
- <button id="btn4">rond</button>
- <button id="btn5">background</button>
+
  <div class="rectangle">
- <img src="./assest-01.png" id="croix" alt="Image 3" />
- <img src="./assest-01.png" id="croix2" alt="Image 3" />
- <img src="./1. banane.png" id="blod" alt="banane" />
- <img src="./assest-02.png" id="cercle" alt="Image 2" />
- <img src="./assest-02.png" id="cercle2" alt="Image 2" />
- <img src="./bg-1.PNG" id="backgroung1" alt="fond"/>
+  <!-- <img src="./assest-01.png" id="croix" alt="Image 3" /> -->
+  <!-- <img src="./assest-01.png" id="croix2" alt="Image 3" /> -->
+  <img src="./1. banane.png" id="blod" alt="banane" />
+  <img src="./assest-02.png" id="cercle" alt="Image 2" />
+  <img src="./assest-02.png" id="cercle2" alt="Image 2" />
+  <img src="./bg-1.PNG" id="backgroung1" alt="fond"/>
  </div>
+
+ <div class="information">
+  <p>fjzeifizuhbfiuzbf zkf zhjb zfjb zjh</p>
+ </div>
+
+
+
+
+</div>
  <script>
 
 
@@ -52,9 +78,15 @@
 // Bouton fruit
 
 var banane= [
+ './1. banane.png', 
  './2. avocat.png',
  './3. orange.png',
  './4. fraise.png',
+ './5. cerise.png',
+ './6. citron.png',
+ './7. ananas.png',
+ './8. peche.png',
+ './9. pasteque.png',
 
 ];
 
@@ -81,57 +113,60 @@ var index = Math.floor(Math.random() * banane.length);
 
 
 
-// Bouton étoiles
+// // Bouton étoiles
 
-var etoile1= [
- 'assest-01.png',
+// var etoile1= [
+//  'assest-01.png',
 
-];
+// ];
 
-// sélectionner le bouton et l'image, code des croix
+// // sélectionner le bouton et l'image, code des croix
 
-var btn = document.getElementById('btn');
-var croix = document.getElementById('croix');
+// var btn = document.getElementById('btn');
+// var croix = document.getElementById('croix');
 
-// ajouter un événement de clic au bouton
+// // ajouter un événement de clic au bouton
 
-btn.addEventListener('click', function() {
+// btn.addEventListener('click', function() {
 
-// générer un index aléatoire
+// // générer un index aléatoire
 
- var index = Math.floor(Math.random() * etoile1.length);
+//  var index = Math.floor(Math.random() * etoile1.length);
 
-// changer la source de l'image
+// // changer la source de l'image
 
- croix.style.top = getRandomPercentage();
- croix.style.left = getRandomPercentage();
- croix.src = etoile1[index];
-});
+//  croix.style.top = getRandomPercentage();
+//  croix.style.left = getRandomPercentage();
+//  croix.src = etoile1[index];
+// });
 
-// sélectionner le bouton et l'image, code des croix2
 
-var btn = document.getElementById('btn');
-var croix2 = document.getElementById('croix2');
 
-// ajouter un événement de clic au bouton
 
-btn.addEventListener('click', function() {
+// // sélectionner le bouton et l'image, code des croix2
 
-// générer un index aléatoire
+// var btn = document.getElementById('btn');
+// var croix2 = document.getElementById('croix2');
 
-var index = Math.floor(Math.random() * etoile1.length);
+// // ajouter un événement de clic au bouton
 
-// changer la source de l'image
+// btn.addEventListener('click', function() {
 
-croix2.style.top = getRandomPercentage();
-croix2.style.left = getRandomPercentage();
-croix2.src = etoile1[index];
+// // générer un index aléatoire
 
-});
+// var index = Math.floor(Math.random() * etoile1.length);
 
-function getRandomPercentage() {
-return Math.floor(Math.random() * 91) + "%";
-}
+// // changer la source de l'image
+
+// croix2.style.top = getRandomPercentage();
+// croix2.style.left = getRandomPercentage();
+// croix2.src = etoile1[index];
+
+// });
+
+// function getRandomPercentage() {
+// return Math.floor(Math.random() * 91) + "%";
+// }
 
 
 
@@ -240,11 +275,24 @@ function changeBackgroundColor(){
 
 <style>
 
+.container2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+.container3,.information {
+
+}
+
 .rectangle {
-  width: 500px;
-  height: 700px;
+  width: 350px;
+  height: 500px;
   background-color: #eee;
-  border: 1px solid #f70101;
+  border: 3px solid #b5b5b5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,8 +306,8 @@ function changeBackgroundColor(){
 
 .rectangle{
   position: relative;  
-  width: 500px;
-  height: 700px;
+  width: 350px;
+  height: 500px;
 }
 
 .rectangle img{
@@ -269,17 +317,6 @@ function changeBackgroundColor(){
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.rectangle {
-  position: relative;  
-  width: 500px;
-  height: 700px; 
-  background-color: #eee;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .rectangle img {
@@ -292,6 +329,26 @@ function changeBackgroundColor(){
   z-index: 2;
 }
 
+
+/* bouton fruits */
+.all_fruits {
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: left;
+}
+
+/* bouton étoile */
+.icone_etoile {
+  width: 60%;
+  height: 25%;
+  display: flex;
+  justify-content: left;
+}
+
+
+
+
 #croix {
   transform: translate(-50%, -50%);  
   width: 150px;  
@@ -301,14 +358,14 @@ function changeBackgroundColor(){
   z-index: 1;
 }
 
-#croix2 {
+/* #croix2 {
   transform: translate(-50%, -50%); 
   width: 200px;  
   height: 200px; 
   top: 30%;
   left: 60%;
   z-index: 1;
-}
+} */
 
 #cercle {
 transform: translate(-50%, -50%);
@@ -386,7 +443,9 @@ z-index: 0;
       background-color: #ffffff;
       color: #000000;
       padding: 60px;
+      padding-top: 0%;
       font-family: 'Calibri', sans-serif;
+      font-size: larger;
 }
 
 
@@ -421,15 +480,22 @@ z-index: 0;
 
     #panier {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 70px;
+      right: 70px;
       width: 60px;
        height: 60px;
       margin-right: 10px;
     }
 
+    #burger {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      top: 70px;
+      left:70px;
+    }
 
-
+    
      /* Style des liens du menu */
 
      #menu ul {
@@ -451,7 +517,7 @@ z-index: 0;
 
       color: #000000;
       text-decoration: none;
-       padding: 12px;
+       padding: 20px;
 
      }
 
@@ -469,7 +535,7 @@ z-index: 0;
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script>
+<!-- <script>
   function Screenx(){
   console.log("pokemon")
   var canvasPromise = html2canvas(document.body, {
@@ -500,8 +566,7 @@ a.click()
 
 } 
 document.querySelector(".Screenshot").addEventListener("click",Screenx);
-</script>
-
+</script> -->
 
 
 
